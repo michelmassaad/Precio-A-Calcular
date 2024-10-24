@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Precios</h1>
+        
+        <h2>PASO 1: Calculo de Tasas</h2>
+        <div class="input-container">
+            <label for="tasaParalelo">Tasa Paralelo:</label>
+            <input type="number" id="tasaParalelo" class="rectangulo" value="49">
+        </div>
+
+        <div class="input-container">
+            <label for="tasaOficial">Tasa Oficial:</label>
+            <input type="number" id="tasaOficial" class="rectangulo" value="40">
+        </div>
+
+        <div class="input-container">
+            <label for="diferenciaTasas">Diferencia Tasas (%):</label>
+            <input type="number" id="diferenciaTasas" class="rectangulo" readonly>
+        </div>
+
+        <h2>PASO 2: Precio Por Prenda Aumentado</h2>
+
+        <div class="input-container">
+            <label for="precioCalcular">Precio Orginal a Calcular:</label>
+            <input type="number" id="precioCalcular" class="rectangulo" value="10">
+        </div>
+
+        <div class="input-container">
+            <label for="porcentajeDescuento">Porcentaje Descuento:</label>
+            <input type="number" id="porcentajeDescuento" class="rectangulo" value="15">
+        </div>
+
+        <div class="results-container">
+            <h2>Resultados</h2>
+            <table>
+                <tr>
+                    <th>Resultado</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Precio en Bolívares</td>
+                    <td><input type="text" id="precioBS" readonly></td>
+                </tr>
+                <tr>
+                    <td>Dólar Aumento</td>
+                    <td><input type="text" id="dolarAumento" readonly></td>
+                </tr>
+                <tr>
+                    <td>Descuento en USD</td>
+                    <td><input type="text" id="descuentoUSD" readonly></td>
+                </tr>
+            </table>
+        </div>
+        
+        <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
